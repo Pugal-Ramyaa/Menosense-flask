@@ -1,10 +1,17 @@
 {
     "version": 2,
     "builds": [
-      { "src": "serverless-function.js", "use": "@vercel/node" }
+      {
+        "src": "myflask.py",
+        "use": "@vercel/python"
+      }
     ],
     "routes": [
-      { "src": "/predict", "dest": "/serverless-function.js" }
+      { "handle": "filesystem" },
+      {
+        "src": "/predict",
+        "dest": "/myflask.py"
+      }
     ]
   }
   
