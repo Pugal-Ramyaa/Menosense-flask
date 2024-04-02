@@ -19,7 +19,7 @@ meta_model = joblib.load('./meta_model.joblib')
 # Load the recommendation models
 recommendation_models = {}
 for recommendation in ['lifestyle_modification', 't2dm', 'less_salt_intake', 'regular_exercise', 'nutrition_rich_food', 'medication']:
-    model = joblib.load(f'C:/Users/Ramya/Desktop/New folder/tflite/{recommendation}_model.joblib')
+    model = joblib.load(f'./{recommendation}_model.joblib')
     recommendation_models[recommendation] = model
 
 # Define endpoint for making predictions
